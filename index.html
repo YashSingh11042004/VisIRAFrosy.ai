@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VishIRAFrosy.ai — AI & Crypto Innovators</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary-color: #1a73e8;
+      --primary-hover: #185abc;
+      --accent-color: #1a73e8;
+      --background-light: #ffffff;
+      --text-dark: #202124;
+      --section-padding: 80px 0;
+      --shadow-light: 0 1px 3px rgb(60 64 67 / 0.3);
+    }
+
+    body {
+      background-color: var(--background-light);
+      color: var(--text-dark);
+      font-family: 'Roboto', Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: var(--background-light);
+      border-bottom: 1px solid #dadce0;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      box-shadow: var(--shadow-light);
+    }
+
+    .navbar-brand {
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 1.6rem;
+    }
+
+    .navbar-brand:hover {
+      color: var(--primary-hover);
+      text-decoration: none;
+    }
+
+    .nav-link {
+      color: var(--text-dark);
+      font-weight: 500;
+      transition: color 0.3s ease;
+      border-bottom: none !important;
+      text-decoration: none !important;
+      box-shadow: none !important;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: var(--background-light);
+      color: var(--text-dark);
+      padding: 140px 15px 100px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #5f6368;
+      margin-bottom: 2rem;
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      font-weight: 600;
+      padding: 0.625rem 1.5rem;
+      font-size: 1.1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+      border-color: var(--primary-hover);
+    }
+
+    /* General Sections */
+    section {
+      padding: var(--section-padding);
+      margin-bottom: 40px;
+      border-radius: 6px;
+      background-color: var(--background-light);
+      box-shadow: var(--shadow-light);
+    }
+
+    /* Section Titles */
+    .section-title {
+      color: var(--primary-color);
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    /* Cards */
+    .feature-card,
+    .usecase-card,
+    .team-card {
+      background-color: #f8f9fa;
+      border-radius: 12px;
+      padding: 1.8rem;
+      box-shadow: 0 1px 2px rgb(60 64 67 / 0.15);
+      color: var(--text-dark);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover,
+    .usecase-card:hover,
+    .team-card:hover {
+      box-shadow: 0 8px 20px rgb(26 115 232 / 0.3);
+    }
+
+    .feature-card h5,
+    .usecase-card h5,
+    .team-card h5 {
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    .feature-card p,
+    .usecase-card p,
+    .team-card p {
+      font-size: 1rem;
+      color: #3c4043;
+    }
+
+    /* Team Member Image */
+    .team-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 8px rgb(26 115 232 / 0.25);
+    }
+
+    /* Team Member Role */
+    .team-role {
+      color: #5f6368;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-top: 0.25rem;
+      margin-bottom: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 767px) {
+      section {
+        padding: 40px 15px;
+      }
+
+      .hero {
+        padding: 80px 15px 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand fw-bold fs-3 me-auto" href="#">VishIRAFrosy.ai</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#whychooseus">Why Choose Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#usecases">Use Cases</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn-primary ms-3"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSe7tBjJQjxlD1AcBiJQiLj8TXVLmKi26JMgUPGD5GVD1a1D7g/viewform?usp=header"
+          target="_blank" rel="noopener noreferrer">Apply Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-4" data-aos="fade-up">Empowering Tomorrow With AI & Blockchain</h1>
+      <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">
+        Transforming digital economies through intelligent, decentralized innovation.
+      </p>
+      <a href="#features" class="btn btn-primary btn-lg" data-aos="zoom-in">Explore Technology</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">Core Features</h2>
+      <div class="row g-4">
+        <div class="col-md-3" data-aos="fade-up">
+          <div class="feature-card">
+            <h5>Smart Contracts</h5>
+            <p>Secure and automatic blockchain agreements for transparency and efficiency.</p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-card">
+            <h5>AI Trading Bots</h5>
+            <p>Real-time adaptive learning systems for accurate financial decisions.</p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-card">
+            <h5>Crypto Wallets</h5>
+            <p>Multi-chain compatible and highly secure digital asset vaults.</p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-card">
+            <h5>Data Analytics</h5>
+            <p>Insightful blockchain data visualization for strategic growth.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">About VishIRAFrosy.ai</h2>
+      <p class="text-center lead mb-4" data-aos="fade-up">
+        Founded by Yash Singh in 2023, VishIRAFrosy.ai pioneers the intersection of artificial intelligence and blockchain technology,
+        dedicated to creating scalable, secure, and user-friendly platforms that empower businesses and individuals worldwide.
+      </p>
+      <p data-aos="fade-up" data-aos-delay="100">
+        Our vision is to accelerate adoption of decentralized technologies through innovative AI solutions that enhance automation,
+        security, and user experience in the crypto economy.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section id="whychooseus">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">Why Choose VishIRAFrosy.ai?</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="feature-card">
+            <h5>Cutting-Edge Tech</h5>
+            <p>Combining latest AI research with robust blockchain protocols.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-card">
+            <h5>Secure & Transparent</h5>
+            <p>End-to-end encryption and immutable ledgers for trustless transactions.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-card">
+            <h5>User-Centered Design</h5>
+            <p>Intuitive interfaces and personalized AI-powered experiences.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section id="usecases">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">Use Cases</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="usecase-card">
+            <h5>Decentralized Finance</h5>
+            <p>Automating loans, insurance, and asset management without intermediaries.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="usecase-card">
+            <h5>Supply Chain</h5>
+            <p>AI-enabled tracking and verification for transparent goods flow.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="usecase-card">
+            <h5>Digital Identity</h5>
+            <p>Secure authentication powered by AI fraud detection and blockchain.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">Contact Us</h2>
+      <p class="text-center mb-4" data-aos="fade-up">
+        Interested in collaborating or learning more? Reach out to us!
+      </p>
+      <div class="row justify-content-center">
+        <div class="col-md-8" data-aos="fade-up" data-aos-delay="100">
+          <form action="#" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name *</label>
+              <input type="text" class="form-control" id="name" required />
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email *</label>
+              <input type="email" class="form-control" id="email" required />
+              <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message *</label>
+              <textarea class="form-control" id="message" rows="4" required></textarea>
+              <div class="invalid-feedback">Please enter your message.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+  <!-- Professional Buttons Container -->
+          <div class="mt-5 d-flex justify-content-center gap-3">
+            <a href="https://www.linkedin.com/in/yashsingh123/" target="_blank" rel="noopener noreferrer"
+              class="btn btn-primary d-flex align-items-center px-4" style="gap: 0.5rem;">
+              <i class="bi bi-linkedin fs-5"></i> LinkedIn
+            </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7tBjJQjxlD1AcBiJQiLj8TXVLmKi26JMgUPGD5GVD1a1D7g/viewform?usp=header"
+              target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline-primary d-flex align-items-center px-4" style="gap: 0.5rem;">
+              <i class="bi bi-file-earmark-text fs-5"></i> Application Form
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Bootstrap form validation
+    (() => {
+      'use strict'
+      const forms = document.querySelectorAll('.needs-validation')
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+  </script>
+
+</body>
+
+</html>
